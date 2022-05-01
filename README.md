@@ -1,2 +1,2 @@
 # mrl
-Humaniod
+Humanoid team projects
