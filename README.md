@@ -1,2 +1,2 @@
-# mrl
+# MRL - HSL
 Humanoid team projects
