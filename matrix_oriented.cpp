@@ -157,7 +157,7 @@ void matrix :: inverse3 (){
 }
 //===============================
 void matrix :: inverse2(){
-	// creating matrix with specific formula:
+	
 	mat6[0][0] = mat1[1][1];
 	mat6[0][1] = -mat1[0][1];
 	mat6[1][0] = -mat1[1][0];
