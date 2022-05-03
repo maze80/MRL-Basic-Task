@@ -14,7 +14,7 @@ double calculator_dir(int **,int);
 double calculator_rand(int **,int);
 //=========================
 
-main(){
+int main(){
 	int **matrix1,constant,range;
 	cout<<"Enter a constant number for row & column : ";cin>>constant;
 	cout<<"Enter repetition number : ";cin>>range;
