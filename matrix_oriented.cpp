@@ -16,6 +16,10 @@ class matrix{
 		void diag();
 		void inverse2();
 		void inverse3();
+		matrix();
+		matrix(float **,float **,float,int);
+		matrix(const matrix &);
+		~matrix();
 };
 //===========================
 void matrix :: init(){
@@ -181,6 +185,26 @@ void matrix :: inverse2(){
 	printer(0);
 	//delete []tmp;
 }
+//===============================
+matrix :: matrix (){
+	mat = 0;
+	tmp = 0;
+	determinant = 0;
+	size = 0;
+}
+matrix :: matrix (float **m,float **t,float d,int s){
+	mat = m;
+	tmp = t;
+	determinant = d;
+	size = s;
+}
+matrix :: matrix(const matrix &sample){
+	mat = sample.mat;
+	tmp = sample.tmp;
+	determinant = sample.determinant;
+	size = sample.size;
+}
+matrix :: ~matrix(){};
 //===============================
 int main(){
 	matrix matrix1,matrix2;
