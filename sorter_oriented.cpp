@@ -3,7 +3,7 @@
 using namespace std;
 //====================
 class sorter{
-	public:
+	private:
 		int index,tmp,*array,size;
 	public:
 		void initialize();
@@ -16,6 +16,8 @@ class sorter{
 		void merge_sort(int *,int,int);
 		void merger(int *,int,int,int);
 		void swap(int *,int *);
+		int* get_array();
+		int get_size();
 		sorter();
 		sorter(int,int,int *,int);
 		sorter(const sorter &);
@@ -55,10 +57,13 @@ void sorter :: printer(){
 	}
 
 }
-//==============================
-
-
-
+//======================================
+int* sorter :: get_array(){
+	return array;
+}
+int sorter :: get_size(){
+	return size;
+}
 //======================================
 int sorter :: divider(int *array,int begin,int end){
     int anchorpoint=begin;
@@ -193,7 +198,7 @@ sorter :: sorter(const sorter &sample){
 sorter :: ~sorter(){};
 //=========================
 
-main(){
+int main(){
 
 	sorter sample;
 	sample.initialize();
@@ -224,11 +229,11 @@ main(){
 	}
 	else if(p_number == 4){
 		cout<<"\n========== Quick sort ==========\n";
-		sample.quick_sort(sample.array,0,sample.size-1);		
+		sample.quick_sort(sample.get_array(),0,sample.get_size()-1);		
 	}
 	else{
 		cout<<"\n========== Merge sort ==========\n";
-		sample.merge_sort(sample.array,0,sample.size-1);		
+		sample.merge_sort(sample.get_array(),0,sample.get_size()-1);		
 	}
 
 	sample.printer();
